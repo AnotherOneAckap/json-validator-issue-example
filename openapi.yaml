@@ -1,0 +1,20 @@
+---
+openapi: 3.0.3
+
+info:
+  title: Plain spec
+  version: 0.0.1
+
+paths:
+  /:
+    get:
+      description: Sample Operation
+      responses:
+        200:
+          description: Sample response
+          content:
+            text/plain:
+              schema:
+                type: string
+                enum:
+                  - 'valid value'

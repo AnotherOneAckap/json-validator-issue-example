@@ -1,0 +1,25 @@
+---
+openapi: 3.0.3
+
+info:
+  title: Spec with references in responses
+  version: 0.0.1
+
+paths:
+  /:
+    get:
+      description: Sample Operation
+      responses:
+        200:
+          $ref: "#/components/responses/Response1"
+
+components:
+  responses:
+    Response1:
+      description: Sample response
+      content:
+        text/plain:
+          schema:
+            type: string
+            enum:
+              - 'valid value'
